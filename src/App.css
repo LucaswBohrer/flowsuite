@@ -1,0 +1,67 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;background:#f3f4f6}
+header{background:#111827;color:#fff;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header h1{font-size:18px;margin:0}
+header h1 span{color:#ff7a1a}
+header small{font-weight:400;color:#d1d5db;font-size:13px}
+.hamburger{display:none;background:transparent;color:#fff;border:1px solid #4b5563;border-radius:8px;padding:8px 12px;cursor:pointer;font-size:18px}
+.filebox{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.filename{color:#d1d5db;font-size:13px;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+button,.btn{background:#ff6a00;color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;font-weight:600}
+button:disabled{opacity:.6;cursor:wait}
+button.secondary{background:#fff;color:#111827;border:1px solid #d1d5db}
+.banner{margin:12px 16px 0;padding:12px 16px;border-radius:10px;font-size:14px}
+.banner.error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+.banner.warn{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.dropzone{margin:12px 16px 0;padding:28px;text-align:center;border:3px dashed #ff6a00;border-radius:12px;background:#fff7ed;font-weight:700;color:#9a3412}
+.layout{display:flex;min-height:calc(100vh - 57px)}
+aside{width:210px;background:#fff;border-right:1px solid #e5e7eb;padding:12px;flex-shrink:0}
+aside button{display:block;width:100%;text-align:left;margin-bottom:6px;background:#fff;color:#374151;border:1px solid transparent}
+aside button.active{background:#ff6a00;color:#fff}
+aside .hint{font-size:12px;color:#6b7280;line-height:1.4;margin-top:12px}
+.extlink{display:block;text-align:center;text-decoration:none;margin-top:10px;background:#fff;color:#111827;border:1px solid #d1d5db;border-radius:8px;padding:8px 14px;font-weight:600;font-size:14px}
+main{flex:1;padding:16px;min-width:0}
+.cards{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px 16px;min-width:130px}
+.card b{font-size:22px;display:block}
+.card span{font-size:12px;color:#6b7280}
+.panel{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:14px}
+.panel h2{margin:0 0 4px;font-size:17px}
+.panel p.sub{margin:0 0 12px;color:#6b7280;font-size:13px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+input,select{padding:8px 10px;border:1px solid #d1d5db;border-radius:8px;background:#fff}
+input[type=search]{min-width:220px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 8px;border-bottom:1px solid #eef2f7;text-align:left;vertical-align:top}
+th{background:#f9fafb;cursor:pointer;white-space:nowrap}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700}
+.linked{background:#dcfce7;color:#166534}
+.unlinked{background:#fee2e2;color:#991b1b}
+.muted{color:#6b7280;font-size:13px}
+.empty{padding:28px;text-align:center;color:#6b7280}
+.svgwrap{overflow:auto;border:1px solid #e5e7eb;border-radius:12px;background:#fff}
+.svgwrap svg{display:block}
+.vlabel{font-size:11px;font-family:system-ui,sans-serif}
+.labels{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.label{border:2px solid #111827;border-radius:10px;padding:10px;background:#fff}
+.label b{font-size:18px}
+.label div{font-size:12px;color:#374151}
+details{margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+.codeblock{background:#0f172a;color:#a7f3d0;border-radius:10px;padding:14px;overflow:auto;max-height:520px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.5;white-space:pre;margin:0}
+.codeblock .cm{color:#94a3b8}
+.welcome code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+@media(max-width:860px){
+  .hamburger{display:block}
+  .layout{flex-direction:column}
+  aside{width:auto;display:none}
+  aside.open{display:block}
+  header .filebox{margin-left:0}
+  input[type=search]{min-width:0;flex:1}
+}
+@media print{
+  header,aside,.row,.cards,.no-print,.banner{display:none!important}
+  body{background:#fff}
+  main{padding:0}
+  .panel{border:0;padding:0}
+}
